@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login y Registro</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Agregar el script de Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Correo electrónico" required>
+      <input type="password" id="loginPassword" placeholder="Contraseña" required>
+      <button type="submit">Ingresar</button>
+    </form>
+
+    <h3>¿No tienes cuenta?</h3>
+    <button onclick="showRegister()">Regístrate</button>
+
+    <div id="registerForm" style="display:none;">
+      <h2>Registro</h2>
+      <form>
+        <input type="email" id="registerEmail" placeholder="Correo electrónico" required>
+        <input type="password" id="registerPassword" placeholder="Contraseña" required>
+        <button type="submit" id="registerBtn">Registrar</button>
+      </form>
+      <button onclick="hideRegister()">Volver al Login</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
